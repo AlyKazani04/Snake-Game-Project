@@ -9,6 +9,22 @@
 #define FILENAME "Highscores.txt"
 #define TOP10 10
 
+//function prototypes for c99 or later versions of C (case of implicit declaration)
+int start();
+int menu(int choice);
+int instructions();
+int displaytop10(highscore scores[], int count);
+int loadhighscores(highscore scores[]);
+void savehighscores(highscore scores[], int count);
+void updatehighscores(highscore scores[], int *count, char name[], int score);
+void gameoversound();
+void eatsound();
+void init();
+void draw();
+void rules();
+void input();
+
+
 int snaketailx[100], snaketaily[100]; //snake cords array
 int snaketaillen; //stores snake length
 // Score and flags
@@ -383,7 +399,7 @@ void main() {
 			draw();
 			input();
 			rules();
-			Sleep(80); //wait some time to give user time to react
+			Sleep(70); //wait some time to give user time to react
 		}
 		char name[50];
 		if (!quit) {//only stores info when game is not quit while playing
