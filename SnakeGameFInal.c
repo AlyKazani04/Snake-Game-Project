@@ -9,6 +9,19 @@
 #define FILENAME "Highscores.txt"
 #define TOP10 10
 
+int snaketailx[100], snaketaily[100]; //snake cords array
+int snaketaillen; //stores snake length
+// Score and flags
+int gameover, key, score, startflag = 0, count, quit;
+//coords of snakehead and food
+int x, y, foodx, foody;
+
+typedef struct {
+	char name[50];
+	int score;
+} highscore;//datatype for highscore
+highscore scores[TOP10];//array to save highscores
+
 //function prototypes for c99 or later versions of C (case of implicit declaration)
 int start();
 int menu(int choice);
@@ -25,18 +38,6 @@ void rules();
 void input();
 
 
-int snaketailx[100], snaketaily[100]; //snake cords array
-int snaketaillen; //stores snake length
-// Score and flags
-int gameover, key, score, startflag = 0, count, quit;
-//coords of snakehead and food
-int x, y, foodx, foody;
-
-typedef struct {
-	char name[50];
-	int score;
-} highscore;//datatype for highscore
-highscore scores[TOP10];//array to save highscores
 int start() {
 	int menulocate;
 	char menukey;
@@ -389,7 +390,7 @@ void rules() {
 		eatsound();//sound when eat
 	}
 }
-void main() {
+int main() {
 	count = loadhighscores(scores);//checking how many values in highscore file
 	//menu loop
 	while(start()==1){
@@ -409,4 +410,5 @@ void main() {
 			savehighscores(scores, count);//save list to file
 		}
 	}
+	return 0;
 }
