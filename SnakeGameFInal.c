@@ -157,6 +157,10 @@ int instructions() {
 int displaytop10(highscore scores[], int count) {
 	int i;
 	printf("\n=-=-=-=-=-= Top 10 High Scores -=-=-=-=-=-=\n\n");
+	FILE *file = fopen(FILENAME, "r");//file opened
+	if (!file) {
+		printf("No Highscores available.\n");
+	}
 	for ( i = 0; i < count; i++) {
 		printf("%d. %s - %d\n", i + 1, scores[i].name, scores[i].score);
 	}
