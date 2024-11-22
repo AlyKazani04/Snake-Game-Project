@@ -96,7 +96,7 @@ int menu(int choice) {
 			printf("\nQUIT GAME");
 			printf("\n\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 			printf("\n\nUP and DOWN arrow keys to scroll");
-			printf("\nENTER key to select");
+			printf("\nENTER key to select\n");
 			break;
 
 		case 2:
@@ -109,7 +109,7 @@ int menu(int choice) {
 			printf("\nQUIT GAME");
 			printf("\n\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 			printf("\n\nUP and DOWN arrow keys to scroll");
-			printf("\nENTER key to select");
+			printf("\nENTER key to select\n");
 			break;
 
 		case 3:
@@ -122,7 +122,7 @@ int menu(int choice) {
 			printf("\nQUIT GAME");
 			printf("\n\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 			printf("\n\nUP and DOWN arrow keys to scroll");
-			printf("\nENTER key to select");
+			printf("\nENTER key to select\n");
 			break;
 
 		case 4:
@@ -135,7 +135,7 @@ int menu(int choice) {
 			printf("\nQUIT GAME  <");
 			printf("\n\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 			printf("\n\nUP and DOWN arrow keys to scroll");
-			printf("\nENTER key to select");
+			printf("\nENTER key to select\n");
 			break;
 
 		default:
@@ -160,6 +160,7 @@ int displaytop10(highscore scores[], int count) {
 	FILE *file = fopen(FILENAME, "r");//file opened
 	if (!file) {
 		printf("No Highscores available.\n");
+		
 	}
 	for ( i = 0; i < count; i++) {
 		printf("%d. %s - %d\n", i + 1, scores[i].name, scores[i].score);
@@ -216,13 +217,13 @@ void updatehighscores(highscore scores[], int *count, char name[], int score) {
 }
 //plays a sound when game ends
 void gameoversound() {
-    Beep(440, 300); // A note: 440 Hz, 300 ms
-    Beep(349, 300); // F note: 349 Hz, 300 ms
-    Beep(330, 300); // E note: 330 Hz, 300 ms
+    Beep(440, 250); // A note: 440 Hz, 300 ms
+    Beep(349, 250); // F note: 349 Hz, 300 ms
+    Beep(330, 250); // E note: 330 Hz, 300 ms
 }
 //plays a sound when snake eats food
 void eatsound() {
-	Beep(750, 200); // 750 Hz for 200 ms
+	Beep(750, 150); // 750 Hz for 200 ms
 }
 //intializes coords snake and food
 void init() {
@@ -404,7 +405,7 @@ int main() {
 			draw();
 			input();
 			rules();
-			Sleep(70); //wait some time to give user time to react
+			Sleep(30); //wait some time to give user time to react
 		}
 		char name[50];
 		if (!quit) {//only stores info when game is not quit while playing
