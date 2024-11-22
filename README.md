@@ -48,15 +48,10 @@ DESIGN AND IMPLEMENTATION
     -	After each game, write updated scores back to the file.
 
     ![menu](https://github.com/user-attachments/assets/a98a8002-0957-42b1-b5b3-9af96821f37d)
-   	Menu
     ![gamescreen](https://github.com/user-attachments/assets/6a8dfa2e-918e-4634-9377-c612fef0aed4)
-   	GameScreen
     ![endcondition](https://github.com/user-attachments/assets/70b67b2a-0223-422f-9a5f-4dc3f608dcd1)
-   	EndCondition
     ![Leaderboard](https://github.com/user-attachments/assets/3e31eccb-cd3c-4b72-8804-aced668acebb)
-   	Leaderboard
     ![instructions](https://github.com/user-attachments/assets/71ffe73e-f49c-40e8-b034-a92a08b465cb)
-   	Instructions
 
 REFERENCES:
     [W3Schools](https://www.w3schools.com/)
