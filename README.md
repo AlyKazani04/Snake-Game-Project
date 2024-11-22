@@ -54,7 +54,6 @@ DESIGN AND IMPLEMENTATION
     ![image](https://github.com/user-attachments/assets/71ffe73e-f49c-40e8-b034-a92a08b465cb)
 
 REFERENCES:
-    •	W3schools
-    ![url](https://www.w3schools.com/)
-    ![url](https://www.geeksforgeeks.org/) 
-    ![url](https://youtu.be/t3y2b2_moY8?si=S2XU8SReBuR3KGTL)
+    [W3Schools](https://www.w3schools.com/)
+    [Geeksforgeeks](https://www.geeksforgeeks.org/) 
+    [Live Coding Snake Game in C | YouTube](https://youtu.be/t3y2b2_moY8?si=S2XU8SReBuR3KGTL)
