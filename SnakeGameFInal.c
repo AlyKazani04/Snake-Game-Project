@@ -405,7 +405,7 @@ int main() {
 			draw();
 			input();
 			rules();
-			Sleep(30); //wait some time to give user time to react
+			Sleep(40); //wait some time to give user time to react
 		}
 		char name[50];
 		if (!quit) {//only stores info when game is not quit while playing
